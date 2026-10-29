@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Estante · Biblioteca de historias</title>
+<meta name="description" content="Una pequeña biblioteca de historias de terror de Atlacomulco.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="brand">El Estante<small>Biblioteca de historias</small></div><nav><button class="btn" id="homeBtn">Mostrador</button><button class="btn" id="indexBtn">Abrir índice</button></nav></header>
+<main>
+<section id="homeView"><div class="hero"><div class="hero-copy"><div class="eyebrow">Una colección de mundos</div><h1>Hay historias esperando en el estante.</h1><p class="sub">Recorre la selección del mostrador o abre el índice para explorar la biblioteca completa. Cada libro guarda una puerta a otro mundo.</p><div class="actions" style="margin-top:22px"><button class="btn primary" id="openIndex">Explorar historias</button><button class="btn" id="randomBtn">Sorpréndeme</button></div></div>
+<div class="stage"><span class="stage-label">Selección del mostrador</span><button class="stage-arrow prev" id="prevBtn" aria-label="Anterior">‹</button><div class="stage-row" id="featured"></div><button class="stage-arrow next" id="nextBtn" aria-label="Siguiente">›</button><div class="stage-desc" id="featureDesc"></div></div></div>
+<div class="section-head"><div><div class="eyebrow">A mano</div><h2>En este estante</h2></div><button class="btn" id="seeAll">Ver índice completo →</button></div><div class="shelf"><div class="grid" id="previewGrid"></div></div></section>
+<section id="indexView" class="hidden"><div class="eyebrow">Catálogo general</div><h1>Índice de historias</h1><p class="sub">Busca por título, autor o género y selecciona una cubierta para leer.</p><div class="toolbar"><input id="search" type="search" placeholder="Buscar historia…"><select id="genre"><option value="">Todos los géneros</option></select></div><div class="shelf"><div class="grid" id="indexGrid"></div></div></section>
+<section id="readerView" class="hidden"><div class="toolbar"><button class="btn" id="readerBack">← Volver al índice</button><button class="btn" id="readerHome">Volver al mostrador</button></div><article class="reader" id="reader"><div class="eyebrow" id="readerGenre"></div><h1 id="readerTitle"></h1><p id="readerByline"></p><section id="soundtrackBox" class="soundtrack hidden" aria-label="Banda sonora"><h2>♪ Banda sonora de esta historia</h2><div id="soundtrackPlayer"></div></section><hr style="border:0;border-top:1px solid #b9a17d;margin:25px 0"><div id="readerBody" class="reader-body"></div></article></section>
+</main><footer>El Estante · Una pequeña biblioteca para tus historias</footer>
+<div id="status" class="status hidden" role="status"></div>
+<div id="soundtrackModal" class="soundtrack-pop hidden" role="dialog" aria-labelledby="soundtrackModalTitle"><div class="soundtrack-pop-card"><div class="soundtrack-pop-head"><div><div class="eyebrow">Acompañamiento musical</div><h2 id="soundtrackModalTitle" style="margin:4px 0">Banda sonora</h2></div><div style="display:flex;gap:6px"><button class="btn" id="minimizeSoundtrack" type="button" aria-label="Minimizar reproductor">—</button><button class="btn" id="closeSoundtrack" type="button" aria-label="Detener música y cerrar reproductor">✕</button></div></div><div id="soundtrackModalPlayer"></div><div class="soundtrack-pop-actions"><button class="btn primary" id="startSoundtrack" type="button">Reproducir aquí</button><button class="btn" id="openSoundtrackExternal" type="button">Abrir en Spotify/YouTube ↗</button></div><p class="note">El reproductor queda en una esquina. Minimízalo para seguir leyendo; la música se detiene al salir de esta historia. YouTube puede repetir la pista automáticamente; Spotify no permite forzar el bucle desde este reproductor.</p></div></div>
+<script src="data/stories.js"></script>
+<script src="js/app.js"></script>
+</body></html>
